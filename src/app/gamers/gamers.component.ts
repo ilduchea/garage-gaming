@@ -23,7 +23,6 @@ export class GamersComponent implements OnInit {
   ngOnInit() {
     this.gs.getGamers().subscribe(gamers => {
       this.gamers = gamers;
-      console.log(this.gamers);
     });
   }
 

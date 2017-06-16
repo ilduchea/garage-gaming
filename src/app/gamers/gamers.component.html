@@ -3,9 +3,9 @@
 <label for="sort">Availability:</label>
 <select (change)="filterSelector($event.target.value)">
   <option value="all">All</option>
-  <option value="any">Open Availability</option>
-  <option value="weekends">Weekends</option>
-  <option value="nights">Nights</option>
+  <option value="Open">Open</option>
+  <option value="Weekends">Weekends</option>
+  <option value="Nights">Nights</option>
 </select>
 
 <div *ngFor="let gamer of gamers | availability:filterByOption" class="panel panel-default">
