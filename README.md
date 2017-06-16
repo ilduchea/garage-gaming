@@ -43,10 +43,10 @@
       * age - number
       * availablity - string
       * game types - as an array of strings
+      * joined - timestamp
     * Expansion/Future
       * games - array of strings
       * location - string
-      * joined - timestamp
   * gamer functions.
     * Base
       * Create
