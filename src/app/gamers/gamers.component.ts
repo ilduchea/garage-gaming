@@ -11,7 +11,7 @@ import { GamerService } from '../gamer.service';
   providers: [GamerService]
 })
 export class GamersComponent implements OnInit {
-  gamers: FirebaseListObservable<any[]>;
+  gamers;
   currentRoute: string = this.router.url;
   constructor(
     private router: Router,
@@ -19,7 +19,9 @@ export class GamersComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.gamers = this.gs.getGamers();
+    this.gs.getGamers().subscribe(dataLastEmittedFromObserver => {
+      this.gamers = dataLastEmittedFromObserver;
+    });
   }
 
   goToDetailPage(gamer) {
