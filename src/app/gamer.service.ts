@@ -32,4 +32,9 @@ export class GamerService {
       gameTypes: localUpdatedGamer.gameTypes
     });
   }
+
+  deleteGamer(localGamerToDelete){
+    let gamerEntryInFirebase = this.getGamerById(localGamerToDelete.$key);
+    gamerEntryInFirebase.remove();
+  }
 }

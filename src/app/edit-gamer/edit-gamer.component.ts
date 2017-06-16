@@ -23,4 +23,10 @@ export class EditGamerComponent implements OnInit {
     this.gs.updateGamer(gamer);
   }
 
+  deleteGamer(gamer) {
+    if (confirm("Are you sure you want to delete this gamer?")) {
+      this.gs.deleteGamer(gamer);
+    }
+  }
+
 }
