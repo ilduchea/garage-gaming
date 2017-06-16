@@ -22,4 +22,14 @@ export class GamerService {
   getGamerById(gamerId: string){
     return this.db.object('gamers/' + gamerId);
   }
+
+  updateGamer(localUpdatedGamer){
+    let gamerEntryInFirebase = this.getGamerById(localUpdatedGamer.$key);
+    gamerEntryInFirebase.update({
+      name: localUpdatedGamer.name,
+      age: localUpdatedGamer.age,
+      availablity: localUpdatedGamer.availablity,
+      gameTypes: localUpdatedGamer.gameTypes
+    });
+  }
 }

@@ -1,7 +1,15 @@
 <h2>Gamers</h2>
 
-<div *ngFor="let gamer of gamers | async" (click)="goToDetailPage(gamer)" class="panel panel-default">
+<div *ngFor="let gamer of gamers | async" class="panel panel-default">
   <div class="panel-body">
-    <h3>{{gamer.name}}</h3>
+    <h3 *ngIf="currentRoute === '/gamers'" (click)="goToDetailPage(gamer)">{{gamer.name}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <div class="col-md-6">
+        <app-gamer-detail [adminGamerId]="gamer.$key"></app-gamer-detail>
+      </div>
+      <div class="col-md-6">
+        <app-edit-gamer [adminGamer]="gamer"></app-edit-gamer>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,3 +1,33 @@
-<p>
-  edit-gamer works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Edit Gamer</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Name:</label>
+        <br>
+        <input [(ngModel)]="adminGamer.name">
+      </div>
+      <div>
+        <label>Age:</label>
+        <br>
+        <input [(ngModel)]="adminGamer.age" type="number">
+      </div>
+      <div>
+        <label>Availablity:</label>
+        <br>
+        <input [(ngModel)]="adminGamer.availablity">
+      </div>
+      <div>
+        <label>Game Types:</label>
+        <br>
+        <app-game-types [items]="adminGamer.gameTypes" [options]="itemArrayOptionsGameTypes" (updateItemSender)="gameTypesUpdate($event)"></app-game-types>
+      </div>
+
+      <button class="btn" (click)="updateGamer(adminGamer)"
+      >Update</button>
+      <button class="btn btn-danger" (click)="deleteGamer(adminGamer)">Delete</button>
+    </div>
+  </div>
+</div>
