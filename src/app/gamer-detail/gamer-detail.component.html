@@ -1,3 +1,11 @@
-<p>
-  gamer-detail works!
-</p>
+<div class="">
+  <h3>{{(gamerDetails | async)?.name}}</h3>
+  <h3>Age: {{(gamerDetails | async)?.age}}</h3>
+  <h3>Availablity: {{(gamerDetails | async)?.availablity}}</h3>
+  <h3>Game Types:</h3>
+  <ul>
+    <li *ngFor="let gameType of (gamerDetails | async)?.gameTypes">
+      <b>{{gameType}}</b>
+    </li>
+  </ul>
+</div>
