@@ -1,28 +1,102 @@
 # GarageGaming
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
+## Description
 
-## Development server
+#### _**This site is designed for a group of gamers.**_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### _**By Tyler Stephenson, June 16, 2017**_
 
-## Code scaffolding
+### Setup/Installation Requirements
+* clone <link to repo>
+* cd <local repo>
+* create a `/src/app/api-keys.ts` file to hold your firebase project keys.
+  * the file should look like this with your firebase info replacing the x's:
+    `export var masterFirebaseConfig = {`
+      `apiKey: "xxxx",`
+      `authDomain: "xxxx.firebaseapp.com",`
+      `databaseURL: "https://xxxx.firebaseio.com",`
+      `storageBucket: "xxxx.appspot.com",`
+      `messagingSenderId: "xxxx"`
+    `};`
+* run this series of commands:
+  * `$ npm install`
+  * `$ ng serve`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+## Planning
 
-## Build
+1. Specs
+  * Use Bootstrap for base styling.
+  * gamer model.
+    * Base
+      * name - string
+      * age - number
+      * availablity - string
+      * game types - as an array of strings
+    * Expansion/Future
+      * games - array of strings
+      * location - string
+      * joined - timestamp
+  * gamer functions.
+    * Base
+      * Create
+      * Update
+      * Delete
+      * Find all gamers
+      * Find a given gamer
+      * Sort by availablity
+      * Sort by game types
+    * Expansion
+      * firebase user authentication
+      
+2. User Stories
+  * As a user, I'd like to visit a page to see a list of all team or club members.
+  * As a user, I'd like to click a team or club member's entry in the list to visit their profile page, which should include more details about them.
+  * As a user, I'd like the option to visit an "About" page that explains what the club is, and what they do.
+  * As a user, I'd like all data persisted in a database, so it's always there when I need it.
+  * As a user, I'd like to filter the list of users by their particular role in the group, or some other information/category. (For instance, a club may have a treasurer, president, and/or secretary. A sports team may have a goalie, forward, or striker, a book club may have founders and attendees. You're also welcome to filter by something other than role, if it's more relevant to your project.)
+  * As an administrator, I want to add new users to the club. (User authentication is not required).
+  * As an administrator, I want to edit user profiles, in case I make a mistake, or need to update their details.
+  * As an administrator, need the option to delete a user, in case they leave the club or team.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+3. Integration
+  * index/homepage - welcome.
+    * List gamers
+      * gamer detail
+    * Admin
+      * New gamer
+      * Edit gamer
+  * About.
+  * Contact. ?future
 
-## Running unit tests
+4. UX/UI
+  * Include and modify bootstrap/materialize/Sass etc.
+  * Develop custom style
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. Polish
+  * Refactor
+  * Make README awesome
 
-## Running end-to-end tests
+### Known Bugs
+No known bugs at this time.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Support and Contact details
+* Tyler Stephenson
+* ilduchea@gmail.com
 
-## Further help
+### Technologies Used
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Typescript
+* AngularJS
+* Angular CLI
+* Firebase
+* HTML5
+* CSS
+* Bootstrap
+* jQuery
+* node.js
+
+### License
+
+*This is web page is licensed under the MIT License.*
+
+Copyright (c) 2017 **Tyler Stephenson**
