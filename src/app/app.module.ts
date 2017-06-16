@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -13,6 +14,7 @@ import { GamersComponent } from './gamers/gamers.component';
 import { GamerDetailComponent } from './gamer-detail/gamer-detail.component';
 import { NewGamerComponent } from './new-gamer/new-gamer.component';
 import { EditGamerComponent } from './edit-gamer/edit-gamer.component';
+import { GameTypesComponent } from './game-types/game-types.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,10 +32,12 @@ export const firebaseConfig = {
     GamersComponent,
     GamerDetailComponent,
     NewGamerComponent,
-    EditGamerComponent
+    EditGamerComponent,
+    GameTypesComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule

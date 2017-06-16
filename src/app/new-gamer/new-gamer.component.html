@@ -1,3 +1,47 @@
-<p>
-  new-gamer works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">New Gamer</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-md-6">
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName>
+      </div>
+      <div>
+        <label>Age:</label>
+        <br>
+        <input #newAge type="number">
+      </div>
+      <div>
+        <label>Availablity:</label>
+        <br>
+        <input #newAvailablity>
+      </div>
+      <div>
+        <label>Game Types:</label>
+        <br>
+        <app-game-types [items]="gameTypes" [options]="itemArrayOptionsGameTypes" (updateItemSender)="gameTypesUpdate($event)"></app-game-types>
+      </div>
+
+      <button class="btn" (click)="createGamer(
+        newName.value,
+        newAge.value,
+        newAvailablity.value,
+        gameTypes
+        );
+        newName.value='';
+        newAge.value='';
+        newAvailablity.value=''"
+      >Create</button>
+    </div>
+    <ul class="col-md-6">
+      <li>GameTypes:
+        <ul>
+          <li *ngFor="let gameType of gameTypes">{{gameType}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

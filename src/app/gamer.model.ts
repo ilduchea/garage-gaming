@@ -5,6 +5,6 @@ export class Gamer {
     public name: string,
     public age: number,
     public availablity: string,
-    public gameTypes: string[],
+    public gameTypes: string[]
   ) { }
 }

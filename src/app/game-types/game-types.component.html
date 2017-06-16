@@ -1,0 +1,6 @@
+<div *ngFor="let item of items; let i=index">
+  <input #itemValue="ngModel" [ngModel]="item">
+  <button (click)="updateItem(itemValue.value, i, 'update')" class="btn std-btn">{{options[1]? "Add": "Update"}} {{options[0]}}</button>
+  <button (click)="updateItem(itemValue.value, i, 'delete')" class="btn btn-danger">Delete</button>
+</div>
+<button (click)="addItem()" class="btn std-btn">Add New {{options[0]}}</button>
