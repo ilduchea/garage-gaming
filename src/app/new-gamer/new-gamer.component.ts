@@ -22,13 +22,13 @@ export class NewGamerComponent implements OnInit {
   createGamer(
     name: string,
     age: number,
-    availablity: string,
+    availability: string,
     gameTypes: string[]
   ) {
     let newGamer: Gamer = new Gamer(
       name,
       age,
-      availablity,
+      availability,
       this.gameTypes
     );
     this.gameTypes = [''];

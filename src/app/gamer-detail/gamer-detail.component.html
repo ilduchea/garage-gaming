@@ -1,7 +1,7 @@
 <div class="">
   <h3>{{(gamerDetails | async)?.name}}</h3>
   <h3>Age: {{(gamerDetails | async)?.age}}</h3>
-  <h3>Availablity: {{(gamerDetails | async)?.availablity}}</h3>
+  <h3>availability: {{(gamerDetails | async)?.availability}}</h3>
   <h3>Game Types:</h3>
   <ul>
     <li *ngFor="let gameType of (gamerDetails | async)?.gameTypes">

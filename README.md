@@ -41,7 +41,7 @@
     * Base
       * name - string
       * age - number
-      * availablity - string
+      * availability - string
       * game types - as an array of strings
       * joined - timestamp
     * Expansion/Future
@@ -54,7 +54,7 @@
       * Delete
       * Find all gamers
       * Find a given gamer
-      * Sort by availablity
+      * Sort by availability
       * Sort by game types
     * Expansion
       * firebase user authentication

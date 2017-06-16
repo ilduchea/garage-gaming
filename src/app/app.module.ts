@@ -15,6 +15,7 @@ import { GamerDetailComponent } from './gamer-detail/gamer-detail.component';
 import { NewGamerComponent } from './new-gamer/new-gamer.component';
 import { EditGamerComponent } from './edit-gamer/edit-gamer.component';
 import { GameTypesComponent } from './game-types/game-types.component';
+import { AvailabilityPipe } from './availability.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     GamerDetailComponent,
     NewGamerComponent,
     EditGamerComponent,
-    GameTypesComponent
+    GameTypesComponent,
+    AvailabilityPipe
   ],
   imports: [
     BrowserModule,

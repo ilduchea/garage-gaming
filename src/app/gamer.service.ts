@@ -28,7 +28,7 @@ export class GamerService {
     gamerEntryInFirebase.update({
       name: localUpdatedGamer.name,
       age: localUpdatedGamer.age,
-      availablity: localUpdatedGamer.availablity,
+      availability: localUpdatedGamer.availability,
       gameTypes: localUpdatedGamer.gameTypes
     });
   }

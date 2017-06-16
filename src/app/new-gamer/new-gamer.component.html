@@ -15,9 +15,9 @@
         <input #newAge type="number">
       </div>
       <div>
-        <label>Availablity:</label>
+        <label>availability:</label>
         <br>
-        <input #newAvailablity>
+        <input #newavailability>
       </div>
       <div>
         <label>Game Types:</label>
@@ -28,12 +28,12 @@
       <button class="btn" (click)="createGamer(
         newName.value,
         newAge.value,
-        newAvailablity.value,
+        newavailability.value,
         gameTypes
         );
         newName.value='';
         newAge.value='';
-        newAvailablity.value=''"
+        newavailability.value=''"
       >Create</button>
     </div>
     <ul class="col-md-6">

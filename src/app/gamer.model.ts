@@ -4,7 +4,7 @@ export class Gamer {
   constructor (
     public name: string,
     public age: number,
-    public availablity: string,
+    public availability: string,
     public gameTypes: string[]
   ) { }
 }

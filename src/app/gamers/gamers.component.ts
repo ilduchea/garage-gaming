@@ -13,19 +13,26 @@ import { GamerService } from '../gamer.service';
 export class GamersComponent implements OnInit {
   gamers;
   currentRoute: string = this.router.url;
+  filterByOption: string = 'all';
+
   constructor(
     private router: Router,
     private gs: GamerService
   ) { }
 
   ngOnInit() {
-    this.gs.getGamers().subscribe(dataLastEmittedFromObserver => {
-      this.gamers = dataLastEmittedFromObserver;
+    this.gs.getGamers().subscribe(gamers => {
+      this.gamers = gamers;
+      console.log(this.gamers);
     });
   }
 
   goToDetailPage(gamer) {
     this.router.navigate(['gamers', gamer.$key]);
   };
+
+  filterSelector(filterOption: string) {
+    this.filterByOption = filterOption;
+  }
 
 }
