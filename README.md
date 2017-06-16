@@ -9,15 +9,26 @@
 ### Setup/Installation Requirements
 * clone <link to repo>
 * cd <local repo>
-* create a `/src/app/api-keys.ts` file to hold your firebase project keys.
+* create a firebase project here https://firebase.google.com/
+  * once the project is created navigate to the rules tab via the database section on the left.
+  * modify the rules to look like this:
+  `{
+    "rules": {
+      ".read": true,
+      ".write": true
+    }
+  }`
+  * click publish and then dismiss the warning.
+* create a `/src/app/api-keys.ts` file in the <local repo> to hold your firebase project keys.
   * the file should look like this with your firebase info replacing the x's:
-    `export var masterFirebaseConfig = {`
-      `apiKey: "xxxx",`
-      `authDomain: "xxxx.firebaseapp.com",`
-      `databaseURL: "https://xxxx.firebaseio.com",`
-      `storageBucket: "xxxx.appspot.com",`
-      `messagingSenderId: "xxxx"`
-    `};`
+    `export var masterFirebaseConfig = {
+      apiKey: "xxxx",
+      authDomain: "xxxx.firebaseapp.com",
+      databaseURL: "https://xxxx.firebaseio.com",
+      projectId: "xxxx",
+      storageBucket: "xxxx.appspot.com",
+      messagingSenderId: "xxxx"
+    };`
 * run this series of commands:
   * `$ npm install`
   * `$ ng serve`
@@ -47,7 +58,7 @@
       * Sort by game types
     * Expansion
       * firebase user authentication
-      
+
 2. User Stories
   * As a user, I'd like to visit a page to see a list of all team or club members.
   * As a user, I'd like to click a team or club member's entry in the list to visit their profile page, which should include more details about them.
