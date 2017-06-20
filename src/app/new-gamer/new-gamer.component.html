@@ -18,7 +18,6 @@
         <label>Availability:</label>
         <br>
         <select #newAvailability>
-          <option value="all">All</option>
           <option value="Open">Open</option>
           <option value="Weekends">Weekends</option>
           <option value="Nights">Nights</option>
@@ -33,12 +32,10 @@
       <button class="btn" (click)="createGamer(
         newName.value,
         newAge.value,
-        newavailability.value,
-        gameTypes
+        newAvailability.value
         );
         newName.value='';
-        newAge.value='';
-        newavailability.value=''"
+        newAge.value=''"
       >Create</button>
     </div>
     <ul class="col-md-6">

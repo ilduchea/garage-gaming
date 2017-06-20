@@ -23,7 +23,6 @@ export class NewGamerComponent implements OnInit {
     name: string,
     age: number,
     availability: string,
-    gameTypes: string[]
   ) {
     let newGamer: Gamer = new Gamer(
       name,
@@ -35,7 +34,7 @@ export class NewGamerComponent implements OnInit {
     this.gs.addGamer(newGamer);
   }
 
-  gamerTypesUpdate(gameTypes: string[]) {
+  gameTypesUpdate(gameTypes: string[]) {
     this.gameTypes = gameTypes;
   }
 
